@@ -1,0 +1,16 @@
+{
+  "admins": [
+    { "id": 1, "firstName": "Rahul", "lastName": "Dudhane","email":"rahul.y.dudhane@gmail.com","password":"rahuld" }
+  ],
+  "books": [
+    { "id": 1, "name": "Unix", "author": "J Bach","reviews":2 },
+    { "id": 2, "name": "Angular", "author": "Angular Team","reviews":2 },
+    { "id": 3, "name": "C", "author": "Dennies Ritchi","reviews":2 },
+    { "id": 4, "name": "Java", "author": "James","reviews":2 },
+    { "id": 5, "name": "C++", "author": "Bjarne Stroustrup","reviews":2 },
+    { "id": 6, "name": ".Net", "author": "Microsoft","reviews":2 }
+
+  ],
+
+  "reviews": [{ "id": 1,"bookId":2,"adminId":1 }]
+}

@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <div class="row menu">
+        <span style="font-size:30px;cursor:pointer" (click)="toggleSideBar()"
+        >&#9776; Menu</span>
+    
+      </div>
+    
+      
+      
+      <div class="row">
+        <div class="sidenav" [ngStyle] = "{'width.px':sideBarWidth}">
+          
+          <a href="#">Home</a>
+          <a [routerLink]='["./login"]'  [routerLinkActive]="'active'" >Login</a>
+          <a href="#" *ngIf="userExist">My Profile</a>
+  <a href="#" *ngIf="userExist">My Reviews</a>
+  <a href="#" *ngIf="userExist">Add Admin</a>
+  <a href="#" *ngIf="userExist">Add Review</a>
+  <a href="#" *ngIf="userExist">Logout</a>
+  
+  
+  
+</div>
+
+<div class="main" [ngStyle] = "{'margin-left.px':mainMargin}">
+  
+  <div class="container text-center">
+    <router-outlet></router-outlet>
+  </div>
+  
+</div>
+</div>
+</div>
