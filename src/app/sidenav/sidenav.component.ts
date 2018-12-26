@@ -1,6 +1,8 @@
 import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { LoginComponent } from '../login/login.component';
 import { AdminSevice } from '../services/admin.service';
+import { AuthService } from '../auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidenav',
@@ -11,23 +13,14 @@ export class SidenavComponent implements OnInit {
 
 
   
-  userExist = false;
   sideBarWidth = 250;
   mainMargin = 250;
 
   sideBar = true;
 
-  constructor(private adminService : AdminSevice) { }
+  constructor(private adminService : AdminSevice , private authService : AuthService,private router : Router) { }
 
   ngOnInit() {
-       if(window.localStorage.getItem("isLoggedIn") =='false'){
-        this.userExist = false;
-      } else {
-    this.userExist=true;    
-    }
-
-  
-
       // this.adminService.adminExist.subscribe(data =>{
       //   this.userExist = data;
       // })
@@ -48,6 +41,12 @@ export class SidenavComponent implements OnInit {
       this.sideBar = true;
     }
     
+  }
+
+  logout(){
+    this.adminService.isLoggedIn.next(false);
+    localStorage.clear();
+    this.router.navigate(['/login']);
   }
 
 }

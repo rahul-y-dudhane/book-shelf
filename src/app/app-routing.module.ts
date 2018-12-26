@@ -5,17 +5,8 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 
 const routes: Routes = [
   {
-    path : 'sidenav' ,
-     component: SidenavComponent
-    },
-  {
-    path:'',
-    redirectTo :'sidenav',
-    pathMatch:'full'
-  },
-  {
     path:'**',
-    redirectTo :'sidenav'
+    redirectTo :'login'
   }
 ];
 

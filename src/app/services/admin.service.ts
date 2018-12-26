@@ -8,7 +8,7 @@ export class AdminSevice{
 
     adminUrl = "http://localhost:3000/admins";
 
-    adminExist = new BehaviorSubject(false);
+    isLoggedIn = new BehaviorSubject(false);
 
 
     constructor(private http : HttpClient){

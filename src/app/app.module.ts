@@ -10,13 +10,16 @@ import { SideBarRoutingModule } from './sidebar-routing.module';
 import { AddreviewComponent } from './addreview/addreview.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AdminSevice } from './services/admin.service';
+import { ReviewService } from './services/review.service';
+import { MyreviewsComponent } from './myreviews/myreviews.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidenavComponent,
     LoginComponent,
-    AddreviewComponent
+    AddreviewComponent,
+    MyreviewsComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,7 @@ import { AdminSevice } from './services/admin.service';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [AdminSevice],
+  providers: [AdminSevice, ReviewService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

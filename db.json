@@ -1,16 +1,43 @@
 {
   "admins": [
-    { "id": 1, "firstName": "Rahul", "lastName": "Dudhane","email":"rahul.y.dudhane@gmail.com","password":"rahuld" }
+    {
+      "id": 1,
+      "firstName": "Rahul",
+      "lastName": "Dudhane",
+      "email": "rahul.y.dudhane@gmail.com",
+      "password": "rahuld"
+    }
   ],
-  "books": [
-    { "id": 1, "name": "Unix", "author": "J Bach","reviews":2 },
-    { "id": 2, "name": "Angular", "author": "Angular Team","reviews":2 },
-    { "id": 3, "name": "C", "author": "Dennies Ritchi","reviews":2 },
-    { "id": 4, "name": "Java", "author": "James","reviews":2 },
-    { "id": 5, "name": "C++", "author": "Bjarne Stroustrup","reviews":2 },
-    { "id": 6, "name": ".Net", "author": "Microsoft","reviews":2 }
-
-  ],
-
-  "reviews": [{ "id": 1,"bookId":2,"adminId":1 }]
+  "reviews": [
+    {
+      "name": "Unix",
+      "author": "Morris J Bach",
+      "rating": "5",
+      "ownerId": 1,
+      "price": 350,
+      "pages": 650,
+      "review": "Good book for all new os design learners",
+      "id": 1
+    },
+    {
+      "name": "Let us c",
+      "author": "Yashavant Kanetkar",
+      "rating": "4",
+      "ownerId": 1,
+      "price": 220,
+      "pages": 480,
+      "review": "\"Today's challenges\" need \"Today's solutions\". The way this applies to real-word, it equally applies to programming world. To create solutions that meet today's expectations, one needs to use a modern language like C# and technology like .NET. learning C#.",
+      "id": 2
+    },
+    {
+      "name": "Book1",
+      "author": "abc",
+      "rating": "5",
+      "ownerId": 1,
+      "price": 120,
+      "pages": 12,
+      "review": "abc",
+      "id": 3
+    }
+  ]
 }
