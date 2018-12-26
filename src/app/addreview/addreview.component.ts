@@ -17,23 +17,16 @@ export class AddreviewComponent implements OnInit {
   ngOnInit() {
   }
 
-  addReview(reviewForm : NgForm){
-      console.log(reviewForm);
+  addReview(review : BookReview){
+       review.rating = +review.rating;
+    review = Object.assign({ownerId : +localStorage.getItem('userId')},review);
 
-    // review ={
-    //   name : reviewForm.value.bookName,
-    //   author : reviewForm.value.bookAuthor,
-    //   rating : reviewForm.value.rating,
-    //   ownerId : +localStorage.getItem('userId'),
-    //   price: reviewForm.value.price,
-    //   pages: reviewForm.value.pages,
-    //   review: reviewForm.value.review
-    // }
-    // reviewForm. +localStorage.getItem('userId');
+      console.log(review);
+
     
 
-    //  this.reviewService.addReview(reviewForm).subscribe(data =>{
-    //     reviewForm.reset();
+    //  this.reviewService.addReview(review).subscribe(data =>{
+       
     //  })
   }
 }

@@ -38,6 +38,36 @@
       "pages": 12,
       "review": "abc",
       "id": 3
+    },
+    {
+      "ownerId": 1,
+      "name": "w",
+      "author": "w",
+      "review": "w",
+      "pages": 2,
+      "rating": "2",
+      "price": 23,
+      "id": 4
+    },
+    {
+      "ownerId": 1,
+      "name": "New Book",
+      "author": "XYZ",
+      "review": "Added",
+      "pages": 123,
+      "rating": "1",
+      "price": 134,
+      "id": 5
+    },
+    {
+      "ownerId": 1,
+      "name": "q",
+      "author": "q",
+      "review": "q",
+      "pages": 1,
+      "rating": "3",
+      "price": 23,
+      "id": 6
     }
   ]
 }
