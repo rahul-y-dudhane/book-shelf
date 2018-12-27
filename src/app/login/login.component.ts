@@ -33,6 +33,7 @@ login(form : NgForm){
       this.adminService.isLoggedIn.next(true);
       localStorage.setItem('isLoggedIn', 'true');
       localStorage.setItem('userId',data[0].id);
+      localStorage.setItem('userName',data[0].firstName+' '+data[0].lastName);
       this.router.navigate(['/review']);//change after home component get ready
 
     }

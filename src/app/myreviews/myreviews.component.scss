@@ -11,17 +11,34 @@ textarea{
     font-size: 18px;
 }
 .btn{
-    width: 65%;
-    height: 45px;
     font-size: 18px;
-    background:  rgb(99, 192, 161);
     border: none;
 }
-h2{
-    color: rgb(255, 255, 255);
-    font-size: 35px;
-    margin-top: 5%;
-    margin-bottom: 20px;
+.view-btn{
+    
+    background:  rgb(99, 192, 161);
+}
+.edit-btn{
+    background: #448fb4;
+
+}
+.checked {
+    color: orange;
+  }
+
+h2 {
+    font-size: 25px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-weight: 700;
+}
+.pageTitle{
+    
+        color: rgb(255, 255, 255);
+        font-size: 35px;
+        margin-top: 5%;
+        margin-bottom: 20px;
+ 
 }
 
 .myReviews{
@@ -29,6 +46,10 @@ h2{
     background-color: rgba(255, 255, 255, 0.589);
     padding: 50px 70px 50px 70px;
     width: 100%;
+    border-radius: 25px 130px;
+    box-shadow: 15px 10px 5px grey;
+    // transition-timing-function: ease-in;
+
 }
 .singleReview{
     background-color: rgba(8, 235, 204, 0.589);

@@ -16,7 +16,7 @@ export class AdminSevice{
     }
 
     getAllAdmins() : Observable<any> {
-        return this.http.get(this.adminUrl).pipe(map((res : Response) => res));
+        return this.http.get(this.adminUrl).pipe(res => res);
 }
 
     authenticate(email : string , password : string) : Observable<any>{

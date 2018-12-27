@@ -22,4 +22,12 @@ export class ReviewService {
 
     return this.http.post(this.reviewUrl,review,httpOptions);
   }
+
+  getReviewByOwnerId(ownerId : number): Observable<any>{
+
+    return this.http.get(`${this.reviewUrl}?ownerId=${ownerId}`).pipe(response => response);
+  }
+   getReviewById(id : number): Observable<any> {
+     return this.http.get(`${this.reviewUrl}/${id}`).pipe(response =>response);
+   }
 }

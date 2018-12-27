@@ -29,45 +29,16 @@
       "review": "\"Today's challenges\" need \"Today's solutions\". The way this applies to real-word, it equally applies to programming world. To create solutions that meet today's expectations, one needs to use a modern language like C# and technology like .NET. learning C#.",
       "id": 2
     },
-    {
-      "name": "Book1",
-      "author": "abc",
-      "rating": "5",
-      "ownerId": 1,
-      "price": 120,
-      "pages": 12,
-      "review": "abc",
-      "id": 3
-    },
+    
     {
       "ownerId": 1,
-      "name": "w",
-      "author": "w",
-      "review": "w",
-      "pages": 2,
-      "rating": "2",
-      "price": 23,
-      "id": 4
-    },
-    {
-      "ownerId": 1,
-      "name": "New Book",
-      "author": "XYZ",
-      "review": "Added",
-      "pages": 123,
-      "rating": "1",
-      "price": 134,
-      "id": 5
-    },
-    {
-      "ownerId": 1,
-      "name": "q",
-      "author": "q",
-      "review": "q",
-      "pages": 1,
-      "rating": "3",
-      "price": 23,
-      "id": 6
+      "name": "Java: The Complete Reference",
+      "author": "Herbert Schildt",
+      "review": "In this completely up-to-date volume, Herb Schildt, the world's leading programming author, shows you everything you need to know to develop, compile, debug, and run Java applications and applets",
+      "pages": 1198,
+      "rating": 3,
+      "price": 900,
+      "id": 7
     }
   ]
 }

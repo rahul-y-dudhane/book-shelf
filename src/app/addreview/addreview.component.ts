@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { BookReview } from '../model/bookReview';
 import { ReviewService } from '../services/review.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-addreview',
@@ -12,7 +13,7 @@ export class AddreviewComponent implements OnInit {
 
   btnText = "Add review";
 
-  constructor(private reviewService : ReviewService) { }
+  constructor(private reviewService : ReviewService , private router: Router) { }
 
   ngOnInit() {
   }
@@ -25,8 +26,8 @@ export class AddreviewComponent implements OnInit {
 
     
 
-    //  this.reviewService.addReview(review).subscribe(data =>{
-       
-    //  })
+     this.reviewService.addReview(review).subscribe(data =>{
+       this.router.navigate(['/myreviews']);
+     })
   }
 }

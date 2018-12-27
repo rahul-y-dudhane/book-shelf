@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {ReactiveFormsModule, FormsModule} from '@angular/forms';
+import {NgxPaginationModule} from 'ngx-pagination'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AdminSevice } from './services/admin.service';
 import { ReviewService } from './services/review.service';
 import { MyreviewsComponent } from './myreviews/myreviews.component';
+import { ViewreviewComponent } from './viewreview/viewreview.component';
 
 @NgModule({
   declarations: [
@@ -19,10 +21,12 @@ import { MyreviewsComponent } from './myreviews/myreviews.component';
     SidenavComponent,
     LoginComponent,
     AddreviewComponent,
-    MyreviewsComponent
+    MyreviewsComponent,
+    ViewreviewComponent
   ],
   imports: [
     BrowserModule,
+    NgxPaginationModule,
     SideBarRoutingModule,
     AppRoutingModule,
     FormsModule,
