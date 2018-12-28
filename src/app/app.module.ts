@@ -14,6 +14,10 @@ import { AdminSevice } from './services/admin.service';
 import { ReviewService } from './services/review.service';
 import { MyreviewsComponent } from './myreviews/myreviews.component';
 import { ViewreviewComponent } from './viewreview/viewreview.component';
+import { HomeComponent } from './home/home.component';
+import { BookDetailsComponent } from './book-details/book-details.component';
+import { AddUserComponent } from './add-user/add-user.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { ViewreviewComponent } from './viewreview/viewreview.component';
     LoginComponent,
     AddreviewComponent,
     MyreviewsComponent,
-    ViewreviewComponent
+    ViewreviewComponent,
+    HomeComponent,
+    BookDetailsComponent,
+    AddUserComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
