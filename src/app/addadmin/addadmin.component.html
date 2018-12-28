@@ -1,0 +1,96 @@
+<div class="container">
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-8">
+          <div class="reviewForm">
+            <h2>{{headingText}}</h2>
+
+            <form [formGroup]="adminForm">
+            
+              <div class="form-group">
+              
+              <input id="firstName" type="text" class="form-control" formControlName="firstName" 
+               placeholder="First Name">
+              
+              <div *ngIf="adminForm.controls['firstName'].touched && !adminForm.controls['firstName'].valid"
+               class="alert alert-danger">
+              
+              <div  *ngIf="adminForm.controls['firstName'].hasError('required') ">
+                First name is required.
+              </div>
+            </div>
+          </div>
+          
+          
+          <div class="form-group">
+            
+            <input id="lastName" type="text" class="form-control" formControlName="lastName" 
+            placeholder="Last name" required >
+                      
+            <div *ngIf="adminForm.controls['lastName'].touched && !adminForm.controls['lastName'].valid"
+            class="alert alert-danger">
+      
+                  <div  *ngIf="adminForm.controls['lastName'].hasError('required') ">
+                    Last name is required.
+                  </div>
+                </div>
+          </div>
+          
+          
+          <div class="form-group">
+            
+                      <input id="email" type="email" class="form-control" formControlName="email" 
+                       placeholder="Email ID" required>
+                     
+                      <div *ngIf="adminForm.controls['email'].touched && !adminForm.controls['email'].valid"
+                      class="alert alert-danger">
+                
+                            <div  *ngIf="adminForm.controls['email'].hasError('required') ">
+                            Email is required.
+                            </div>
+                          </div>
+            </div>
+                     
+            
+            <div class="form-group">
+            
+               <input id="password" type="password" class="form-control" formControlName="password" 
+               placeholder="Password" required>
+                               
+               <div *ngIf="adminForm.controls['password'].touched && !adminForm.controls['password'].valid"
+               class="alert alert-danger">
+                         <div  *ngIf="adminForm.controls['password'].hasError('required') ">
+                          Password is required.</div>
+                     </div>
+                     </div>
+              
+              
+               <div class="form-group">
+                     <input id="confirmPass" type="password" class="form-control" formControlName="confirmPass" 
+                     placeholder="Confirm password" required>
+                     <div *ngIf="adminForm.controls['confirmPass'].touched && !adminForm.controls['confirmPass'].valid"
+                     class="alert alert-danger">
+                          <div  *ngIf="adminForm.controls['confirmPass'].hasError('required') ">
+                            Please re-enter password</div>
+                         </div>
+                     </div>
+                    
+                                
+                <!-- <div class="forgot">
+                  <a href="reset.html">Forgot password?</a>
+                </div> -->
+                
+                <button type="submit" [disabled]="!adminForm.valid" class="btn btn-primary">{{btnText}}</button>
+              </form>
+  </div>
+  </div>
+  
+    
+    <div class="col-sm-2"></div>
+    
+    
+  </div>
+  </div>
+
+
+  <!-- https://dzone.com/articles/reactive-forms-in-angular -->

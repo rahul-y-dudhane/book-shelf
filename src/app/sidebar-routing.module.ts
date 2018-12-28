@@ -6,6 +6,7 @@ import { AuthGuard } from './auth/auth.guard';
 import { AddreviewComponent } from './addreview/addreview.component';
 import { MyreviewsComponent } from './myreviews/myreviews.component';
 import { ViewreviewComponent } from './viewreview/viewreview.component';
+import { AddadminComponent } from './addadmin/addadmin.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,11 @@ const routes: Routes = [
         {
             path:'review',
             component:AddreviewComponent,
+            canActivate: [AuthGuard],     
+        },
+        {
+            path:'admin',
+            component:AddadminComponent,
             canActivate: [AuthGuard],     
         },
         {

@@ -16,6 +16,7 @@ import { AdminSevice } from './services/admin.service';
 import { ReviewService } from './services/review.service';
 import { MyreviewsComponent } from './myreviews/myreviews.component';
 import { ViewreviewComponent } from './viewreview/viewreview.component';
+import { AddadminComponent } from './addadmin/addadmin.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ViewreviewComponent } from './viewreview/viewreview.component';
     LoginComponent,
     AddreviewComponent,
     MyreviewsComponent,
-    ViewreviewComponent
+    ViewreviewComponent,
+    AddadminComponent
   ],
   imports: [
     BrowserModule,

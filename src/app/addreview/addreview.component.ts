@@ -11,7 +11,6 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 })
 export class AddreviewComponent implements OnInit {
 
-  btnText = "Add review";
   id : number;
   bookName = ""
   bookAuthor ="";
@@ -19,7 +18,8 @@ export class AddreviewComponent implements OnInit {
   bookPages= null;
   bookPrice= null;
   bookRating= null;
- 
+  
+  btnText = "Add review";
 
   headingText = "Add a review";
 
