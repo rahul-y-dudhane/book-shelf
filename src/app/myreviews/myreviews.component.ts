@@ -4,7 +4,7 @@ import { ReviewService } from '../services/review.service';
 @Component({
   selector: 'app-myreviews',
   templateUrl: './myreviews.component.html',
-  styleUrls: ['./myreviews.component.scss']
+  styleUrls: ['./myreviews.component.scss','../../assets/css/animation-css.scss']
 })
 export class MyreviewsComponent implements OnInit {
 
@@ -19,5 +19,6 @@ export class MyreviewsComponent implements OnInit {
     })
   }
  
+  
 
 }

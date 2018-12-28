@@ -8,19 +8,19 @@ export class ReviewService {
  
   reviewUrl = "http://localhost:3000/reviews";
   
-  
+   httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type':  'application/json'
+    })
+  };
 
   constructor(private http : HttpClient) { }
 
 
   addReview(review : BookReview): Observable<any>{
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type':  'application/json'
-      })
-    };
+    
 
-    return this.http.post(this.reviewUrl,review,httpOptions);
+    return this.http.post(this.reviewUrl,review,this.httpOptions);
   }
 
   getReviewByOwnerId(ownerId : number): Observable<any>{
@@ -30,4 +30,14 @@ export class ReviewService {
    getReviewById(id : number): Observable<any> {
      return this.http.get(`${this.reviewUrl}/${id}`).pipe(response =>response);
    }
+
+   deleteReviewById(id: number): Observable<any>{
+
+    return this.http.delete(`${this.reviewUrl}/${id}`).pipe(res => res);
+   }
+
+   updateReviewById(id : number, review: BookReview){
+     return this.http.put(`${this.reviewUrl}/${id}`,review,this.httpOptions);
+   }
+
 }
