@@ -12,7 +12,7 @@
           <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
           <div class="form-group">
             
-            <input name="email" type="email" class="form-control" #emailRef="ngModel" ngModel [value]="email" placeholder="Email Address"
+            <input name="email" type="email" class="form-control" #emailRef="ngModel" [(ngModel)]="email" placeholder="Email Address"
             pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"  required>
                 
             <div *ngIf="emailRef.invalid && (emailRef.dirty || emailRef.touched)"
@@ -32,8 +32,8 @@
             
             <div class="form-group">
               
-              <input type="password" class="form-control" #passRef="ngModel" ngModel name="password" 
-                [value]="password" placeholder="Password" required>
+              <input type="password" class="form-control" #passRef="ngModel"  name="password" 
+              [(ngModel)]="password" placeholder="Password" required>
                 
                 
                 <div *ngIf="passRef.invalid && (passRef.dirty || passRef.touched)"
