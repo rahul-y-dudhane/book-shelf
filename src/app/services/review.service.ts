@@ -30,4 +30,10 @@ export class ReviewService {
    getReviewById(id : number): Observable<any> {
      return this.http.get(`${this.reviewUrl}/${id}`).pipe(response =>response);
    }
+
+   getAllReview() : Observable<any> {
+    return this.http.get(this.reviewUrl).pipe(res => res);
+}
+
+
 }

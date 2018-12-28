@@ -28,4 +28,9 @@ export class AdminSevice{
 
     }
 
+    getAdminById(id : number): Observable<any> {
+        return this.http.get(`${this. adminUrl}/${id}`).pipe(response =>response);
+      }
+   
+
 }

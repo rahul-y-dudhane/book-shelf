@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   constructor(private reviewService : ReviewService) { }
 
   ngOnInit() {
-    this.reviewService.getReviewByOwnerId(+localStorage.getItem('userId')).subscribe(data =>{
+    this.reviewService. getAllReview().subscribe(data =>{
         this.myReviews = data;
         this.myReviews = this.myReviews.reverse();
     })
