@@ -6,6 +6,10 @@ import { AuthGuard } from './auth/auth.guard';
 import { AddreviewComponent } from './addreview/addreview.component';
 import { MyreviewsComponent } from './myreviews/myreviews.component';
 import { ViewreviewComponent } from './viewreview/viewreview.component';
+import { HomeComponent } from './home/home.component';
+import { BookDetailsComponent } from './book-details/book-details.component';
+import { AddUserComponent } from './add-user/add-user.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   {
@@ -13,6 +17,26 @@ const routes: Routes = [
       component: SidenavComponent,
     
       children:[
+        {
+            path:'home',
+            component:HomeComponent,
+              
+        },
+        {
+            path:'book-details',
+            component:BookDetailsComponent,
+              
+        },
+        {
+            path:'add-user',
+            component:AddUserComponent,
+              
+        },
+        {
+            path:'profile',
+            component:ProfileComponent,
+              
+        },
         {
             path:'review',
             component:AddreviewComponent,
