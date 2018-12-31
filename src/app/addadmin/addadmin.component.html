@@ -105,9 +105,11 @@
                 
                 <button type="submit" [disabled]="!adminForm.valid" class="btn btn-primary">{{btnText}}</button>
                 <button *ngIf="editingMode" class="btn btn-danger" (click)="cancel()">Cancel</button>
-                    <button *ngIf="editingMode" data-target="#confirmModal" data-toggle="modal" class="btn btn-danger hover-shadow btn-delete" title="Delete">  
-                        <i class="fa fa-trash-o" aria-hidden="true"></i>
-                    </button>
+                <div style="vertical-align: middle" *ngIf="editingMode" data-target="#confirmModal" 
+                data-toggle="modal" class="btn btn-danger hover-shadow btn-delete" title="Delete">  
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+              </div>
+              </form>
                     
                     <div id="confirmModal" class="modal fade" role="dialog">
                         <div class="modal-dialog">
@@ -130,7 +132,6 @@
                         </div>
                       </div>
 
-              </form>
   </div>
   </div>
   
