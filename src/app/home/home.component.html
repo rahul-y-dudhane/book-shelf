@@ -10,7 +10,7 @@
  
 
     <div class="panel panel-info box box1 " *ngFor="let review of myReviews |paginate: { itemsPerPage: 4, currentPage: p } ">
-        <a [routerLink]="['/myreview',review.id]">
+        <a [routerLink]="['/review',review.id]">
             <div class="panel-heading bg-danger">
                 <div class="row">
                     <div class="col-sm-11">

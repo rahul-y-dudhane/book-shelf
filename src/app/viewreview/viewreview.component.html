@@ -32,12 +32,12 @@
                     </div>
                     <div class="col-sm-2 text-right" style="padding-right: 0px"> 
 
-                        <button (click)="editReview(review)" class="btn btn-primary edit-btn hover-shadow" title="Edit review"> 
+                        <button *ngIf="!hideBtn" (click)="editReview(review)" class="btn btn-primary edit-btn hover-shadow" title="Edit review"> 
                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                             </button>
                     </div>
                     <div class="col-sm-2 text-left">
-                        <button data-target="#confirmModal" data-toggle="modal" class="btn btn-danger hover-shadow" title="Delete">  
+                        <button *ngIf="!hideBtn" data-target="#confirmModal" data-toggle="modal" class="btn btn-danger hover-shadow" title="Delete">  
                             <i class="fa fa-trash-o" aria-hidden="true"></i>
                         </button>
                         

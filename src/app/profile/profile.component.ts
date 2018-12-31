@@ -4,6 +4,7 @@ import { AdminSevice } from '../services/admin.service';
 import { myProfile} from '../model/myProfile';
 
 import { FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
+import { User } from '../model/user';
 
 @Component({
   selector: 'app-profile',
@@ -12,7 +13,7 @@ import { FormGroup, FormControl, Validators, FormBuilder} from '@angular/forms';
 })
 export class ProfileComponent implements OnInit {
   readonly = true;
-  profile = [];
+  profile: User ;
   userId :number;
   myForm;
 
@@ -31,8 +32,10 @@ export class ProfileComponent implements OnInit {
   })
 }
 
-updateProfile(myProfile:myProfile)
+updateProfile(myProfile:User)
 {
+  myProfile.role = this.profile.role;
+  myProfile.password = this.profile.password;
   this.myservice.updateProfileById(this.userId,myProfile).subscribe(data =>{
 
     this.myservice.getAdminById(this.userId).subscribe(data =>{

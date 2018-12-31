@@ -8,7 +8,7 @@ import { myProfile } from '../model/myProfile';
 @Injectable()
 export class AdminSevice{
 
-    adminUrl = "http://localhost:3000/admins";
+    adminUrl = "http://localhost:5000/admins";
 
     isLoggedIn = new BehaviorSubject(false);
   
@@ -53,7 +53,7 @@ export class AdminSevice{
         return this.http.get(`${this. adminUrl}/${id}`).pipe(response =>response);
       }
 
-      updateProfileById(id : number, myprofile: myProfile):Observable<any>{
+      updateProfileById(id : number, myprofile: User):Observable<any>{
         return this.http.put(`${this.adminUrl}/${id}`,myprofile,this.httpOptions);
       }
    

@@ -12,9 +12,17 @@ export class ViewreviewComponent implements OnInit {
   id : number
   review = [];
   userName : string;
+  hideBtn : boolean = true;
   constructor(private route : ActivatedRoute , private reviewService : ReviewService, private router: Router) { }
 
   ngOnInit() {
+    console.log(this.route);
+    if(this.route.snapshot.routeConfig.path === "review/:id"){
+      this.hideBtn = true;
+    }else{
+      this.hideBtn = false;
+    }
+    
    this.userName =  localStorage.getItem("userName");
     this.route.params.subscribe((params : Params) => {
         this.reviewService.getReviewById(+params['id']).subscribe(data => {
