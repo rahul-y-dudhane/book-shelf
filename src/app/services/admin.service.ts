@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable, BehaviorSubject } from 'rxjs';
 import {map} from 'rxjs/operators';
 import { User } from '../model/user';
+import { myProfile } from '../model/myProfile';
 
 @Injectable()
 export class AdminSevice{
@@ -10,6 +11,7 @@ export class AdminSevice{
     adminUrl = "http://localhost:3000/admins";
 
     isLoggedIn = new BehaviorSubject(false);
+  
 
     httpOptions = {
         headers: new HttpHeaders({
@@ -46,5 +48,15 @@ export class AdminSevice{
     }
 
 
+
+    getAdminById(id : number): Observable<any> {
+        return this.http.get(`${this. adminUrl}/${id}`).pipe(response =>response);
+      }
+
+      updateProfileById(id : number, myprofile: myProfile):Observable<any>{
+        return this.http.put(`${this.adminUrl}/${id}`,myprofile,this.httpOptions);
+      }
+   
+   
 
 }

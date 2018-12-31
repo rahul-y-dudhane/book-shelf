@@ -18,6 +18,10 @@ import { MyreviewsComponent } from './myreviews/myreviews.component';
 import { ViewreviewComponent } from './viewreview/viewreview.component';
 import { AddadminComponent } from './addadmin/addadmin.component';
 import { LogoutComponent } from './logout/logout.component';
+import { HomeComponent } from './home/home.component';
+import { BookDetailsComponent } from './book-details/book-details.component';
+import { AddUserComponent } from './add-user/add-user.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { LogoutComponent } from './logout/logout.component';
     MyreviewsComponent,
     ViewreviewComponent,
     AddadminComponent,
-    LogoutComponent
+    LogoutComponent,
+    HomeComponent,
+    BookDetailsComponent,
+    AddUserComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

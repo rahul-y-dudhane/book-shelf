@@ -39,5 +39,9 @@ export class ReviewService {
    updateReviewById(id : number, review: BookReview): Observable<any>{
      return this.http.put(`${this.reviewUrl}/${id}`,review,this.httpOptions);
    }
+   getAllReview() : Observable<any> {
+    return this.http.get(this.reviewUrl).pipe(res => res);
+}
+
 
 }
