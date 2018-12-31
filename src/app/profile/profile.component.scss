@@ -19,8 +19,47 @@
 .textfont
 {
     font-size: 20px;
+    text-align: left;
 }
 
 hr{
     border: 1px solid rgb(22, 145, 151);
   }
+
+.myinput
+{
+
+    input[type=text] {
+        border: none;
+        background-color: none;
+        outline: 0;
+        font-size: 25px;
+        
+    }
+    
+    input[type=text]:focus {
+        border: none;
+        background-color: none;
+        outline: 0;
+        
+    }
+    input[type=email] {
+        border: none;
+        background-color: none;
+        outline: 0;
+        font-size: 25px;
+        
+    }
+    
+    input[type=email]:focus {
+        border: none;
+        background-color: none;
+        outline: 0;
+        
+    }
+}
+
+.myrow
+{
+    margin-top: 20px;
+}

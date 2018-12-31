@@ -1,11 +1,10 @@
 {
   "admins": [
     {
-      "id": 1,
       "firstName": "Rahul",
       "lastName": "Dudhane",
       "email": "rahul.y.dudhane@gmail.com",
-      "password": "rahuld"
+      "id": 1
     }
   ],
   "reviews": [
