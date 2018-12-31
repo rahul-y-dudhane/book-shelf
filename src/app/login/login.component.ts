@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
 
 
   email ='rahul.y.dudhane@gmail.com';
-  password ='rahuld';
+  password ='rahuld123';
   isError = false;
 
   constructor(private adminService : AdminSevice, private router : Router) { }

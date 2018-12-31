@@ -36,7 +36,7 @@ export class ReviewService {
     return this.http.delete(`${this.reviewUrl}/${id}`).pipe(res => res);
    }
 
-   updateReviewById(id : number, review: BookReview){
+   updateReviewById(id : number, review: BookReview): Observable<any>{
      return this.http.put(`${this.reviewUrl}/${id}`,review,this.httpOptions);
    }
 

@@ -1,7 +1,8 @@
 import {Injectable} from '@angular/core';
-import { HttpClient} from '@angular/common/http';
+import { HttpClient, HttpHeaders} from '@angular/common/http';
 import { Observable, BehaviorSubject } from 'rxjs';
 import {map} from 'rxjs/operators';
+import { User } from '../model/user';
 
 @Injectable()
 export class AdminSevice{
@@ -10,6 +11,11 @@ export class AdminSevice{
 
     isLoggedIn = new BehaviorSubject(false);
 
+    httpOptions = {
+        headers: new HttpHeaders({
+          'Content-Type':  'application/json'
+        })
+      };
 
     constructor(private http : HttpClient){
 
@@ -27,7 +33,17 @@ export class AdminSevice{
 
 
     }
+    addUser(user: User): Observable<any>{
+        return this.http.post(this.adminUrl , user, this.httpOptions);
+    }
 
+    updateUserById(id: number, updatedUser: User): Observable<any>{
+        return this.http.put(`${this.adminUrl}/${id}`,updatedUser,this.httpOptions);
+    }
+
+    deleteUserById(id: number):Observable<any>{
+        return this.http.delete(`${this.adminUrl}/${id}`);
+    }
 
 
 
