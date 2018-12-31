@@ -10,5 +10,9 @@ export class AuthService {
   isLoggedIn(): boolean{
     return (localStorage.getItem('isLoggedIn') == 'true');
     }
+
+  isAdmin():boolean{
+    return (localStorage.getItem('role') == 'admin');
+  }
   
 }

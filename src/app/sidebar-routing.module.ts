@@ -7,6 +7,7 @@ import { AddreviewComponent } from './addreview/addreview.component';
 import { MyreviewsComponent } from './myreviews/myreviews.component';
 import { ViewreviewComponent } from './viewreview/viewreview.component';
 import { AddadminComponent } from './addadmin/addadmin.component';
+import { LogoutComponent } from './logout/logout.component';
 
 const routes: Routes = [
   {
@@ -39,6 +40,10 @@ const routes: Routes = [
             path:'myreview/:id',
             component:ViewreviewComponent,
             canActivate: [AuthGuard],     
+        },
+        {
+            path:'logout',
+            component:LogoutComponent   
         },
         {
             path:'',

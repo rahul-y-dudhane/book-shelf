@@ -7,7 +7,7 @@ import { AdminSevice } from '../services/admin.service';
 @Component({
   selector: 'app-addadmin',
   templateUrl: './addadmin.component.html',
-  styleUrls: ['./addadmin.component.scss']
+  styleUrls: ['./addadmin.component.scss','../../assets/css/animation-css.scss']
 })
 export class AddadminComponent implements OnInit {
 

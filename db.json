@@ -19,7 +19,7 @@
     {
       "firstName": "Tanaya",
       "lastName": "Patil",
-      "email": "tanay@gmail.com",
+      "email": "tanaya@gmail.com",
       "role": "user",
       "password": "12345678",
       "id": 4
@@ -55,6 +55,16 @@
       "rating": 2,
       "price": "545",
       "id": 8
+    },
+    {
+      "ownerId": 4,
+      "name": "The C Programming Language",
+      "author": "Brian W. Kernighan / Dennis Ritchie",
+      "review": "The book enumerates the concepts related to C Programming language, as prescribed by ANSI standard. The book elaborates on the basics of procedure oriented programming and the fundamentals of writing C codes. It goes on to cover aspects like functions and loops, learning which will help novice programmers to code elementary level codes properly.\n\nconcepts Covered\nEach concept is covered using tracing to explain how the particular coding element works, real- time programs to help users understand how to implement learned concepts and computerized outputs to assure validity of programs written. Elementary programming concepts like arrays, loops, assignment statements and operators, functions, file processing, data structures, etc. have been covered in the book. Solved and unsolved questions have been provided to help programmers develop an expertise in writing C codes flawlessly. Error correction exercises, code modification exercises and several such skill-testing exercised have been provided to help students analyse their understanding and knowledge. Model questions have been provided as per examination pattern to help students test themselves.\n\nAbout The Author\nBrian Willis Kernighan, born on 1 January, 1942, is a Canadian computer scientist who is responsible for the development and authoring of the AWK and AMPL programming languages. He also worked in developed UNIX, while he was a part of Bell Labs. Kernighan became renowned by co-authoring the book, The C Programming Language, along with Dennis Ritchie, who also worked in the development project of UNIX. He is currently the Computer Science Professor at Princeton University and has a huge number of accolades to his credit.\n\nThe book is available online for convenient shopping. You can bag this book from Amazon.in today by following a few easy steps.",
+      "pages": 288,
+      "rating": 4,
+      "price": 233,
+      "id": 9
     }
   ]
 }

@@ -46,7 +46,7 @@ export class SidenavComponent implements OnInit {
   logout(){
     this.adminService.isLoggedIn.next(false);
     localStorage.clear();
-    this.router.navigate(['/login']);
+    this.router.navigate(['/logout']);
   }
 
 }
