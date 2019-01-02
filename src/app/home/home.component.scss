@@ -64,10 +64,15 @@ h2 {
 }
 
 .box1
-{
+{     
+    box-shadow: 15px 10px 5px grey;
     float: left;
     margin-left: 35px;
     margin-top: 20px;
 }
 
 
+.bg-danger {
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}

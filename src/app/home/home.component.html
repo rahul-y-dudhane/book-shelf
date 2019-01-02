@@ -10,7 +10,7 @@
  
 
     <div class="panel panel-info box box1 " *ngFor="let review of myReviews |paginate: { itemsPerPage: 4, currentPage: p } ">
-        <a [routerLink]="['/review',review.id]">
+        <a [routerLink]="['/allreviews',review.id]">
             <div class="panel-heading bg-danger">
                 <div class="row">
                     <div class="col-sm-11">
@@ -49,25 +49,7 @@
                     </div>
 
             </div>
-            <div class="panel-footer ">
-                  <div class="row">
-  
-                      
-                      <div class="col-sm-11">
-                          
-                 <button class="btn btn-primary view-btn" title="View details"
-                 [routerLink]="['/myreview',review.id]" > 
-                      <i class="fa fa-eye" aria-hidden="true"></i>
-                    </button>
-                        
-                        
-                        </div>
-
-                     
-                     
-                  </div>
-  
-              </div>
+         
             </a>
           </div>
          
