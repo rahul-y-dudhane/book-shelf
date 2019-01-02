@@ -61,7 +61,7 @@ const routes: Routes = [
             canActivate: [AuthGuard],     
         },  
         {
-            path:'review/:id',
+            path:'allreviews/:id',
             component:ViewreviewComponent    
         },  
         {
